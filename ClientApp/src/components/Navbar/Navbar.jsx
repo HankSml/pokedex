@@ -4,7 +4,8 @@ import {
     Toolbar,
     IconButton, 
     Typography, 
-    Stack, Button,
+    Stack, 
+    Button,
 } from '@mui/material';
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
 
