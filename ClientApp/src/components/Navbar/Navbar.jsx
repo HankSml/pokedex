@@ -1,42 +1,31 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Appbar from '@mui/material/Appbar';
-import Toolbar from '@mui/material/Toolbar';
-import Divider from '@mui/material/Divider';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import {
+    AppBar,
+    Toolbar,
+    IconButton, 
+    Typography, 
+    Stack, Button,
+} from '@mui/material';
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
+
 
 export default function Navbar() {
     return (
-        <Box sx = {{ display: "flex"}}>
-            <Drawer
-                sx = {{
-                    width: 200,
-                }}
-                variant = "permanent"
-                anchor = "left"
-            >
-                <Toolbar />
-                <Divider />
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                                </ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-            </Drawer>
-        </Box>
+        <AppBar position="static">
+            <Toolbar>
+                <IconButton size="large" edge="start" color="inherit" aria-label="logo">
+                    <CatchingPokemonIcon />
+                </IconButton>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    Pokemon Draft App
+                </Typography>
+                <Stack direction="row" spacing={2}>
+                    <Button color="inherit">Pokedex</Button>
+                    <Button color="inherit">Builder</Button>
+                    <Button color="inherit">Type Checker</Button>
+                    <Button color="inherit">Account</Button>
+                </Stack>
+            </Toolbar>
+        </AppBar>
     )
 }
