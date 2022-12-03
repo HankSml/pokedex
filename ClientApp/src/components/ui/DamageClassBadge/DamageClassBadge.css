@@ -1,0 +1,29 @@
+.damageClassBadge {
+    display: inline-flex;
+
+    height: 2em;
+    width: 4em;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    border: 1px solid black;
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-shadow: 1px 1px 1px #333;
+}
+.physical {
+    background-image: url(https://www.smogon.com/dex/media/images/physical.svg);
+    background-color: darkorange;
+}
+.special {
+    background-image: url(https://www.smogon.com/dex/media/images/special.svg);
+    background-color: darkblue;
+}
+.status {
+    background-image: url(https://www.smogon.com/dex/media/images/non-damaging.svg);
+    background-color: darkgray;
+}

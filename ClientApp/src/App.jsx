@@ -9,6 +9,7 @@ import { Stack } from '@mui/material';
 import Navbar from './components/Navbar/Navbar';
 import PokeInfo from './components/PokeInfo/PokeInfo';
 import MovesList from './components/MovesList/MovesList'
+import './App.css'
 
 const queryClient = new QueryClient();
 

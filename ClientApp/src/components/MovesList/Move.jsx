@@ -3,8 +3,10 @@ import {
     Container,
     Typography,
     Link,
-} from '@mui/material'
+} from '@mui/material';
 import { useQuery } from '@tanstack/react-query';
+import TypeBadge from '../ui/TypeBadge/TypeBadge';
+import DamageClassBadge from '../ui/DamageClassBadge/DamageClassBadge';
 
 // query to get move data: name, type, phys/sp, acc, pwr
 async function fetchMove(url) {
@@ -32,12 +34,13 @@ export default function Move({ name, url }) {
                 </Typography>
             )}
             {status == "success" && (
-                <Typography>
+                <Container>
                     {data.name} |
-                    { data.type.name} | 
-                    { data.power? data.power:"-"} | 
-                    { data.accuracy? data.accuracy:"-"}
-                </Typography>
+                    <TypeBadge type={data.type.name}/> 
+                    { data.power || "-"} | 
+                    { data.accuracy || "-"}
+                    <DamageClassBadge damageClass={data.damage_class.name}/>
+                </Container>
             )}
         </Container>
     )

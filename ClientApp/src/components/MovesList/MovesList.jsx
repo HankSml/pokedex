@@ -16,7 +16,6 @@ export default function MovesList(moves) {
     return (
         <Box>
             {moveData.map((move, index) => {
-                console.log(move)
                 return (
                     <Move 
                         key={index}
