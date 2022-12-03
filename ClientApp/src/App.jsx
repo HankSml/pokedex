@@ -8,6 +8,7 @@ import {
 import { Stack } from '@mui/material';
 import Navbar from './components/Navbar/Navbar';
 import PokeInfo from './components/PokeInfo/PokeInfo';
+import MovesList from './components/MovesList/MovesList'
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ function App() {
       <Stack direction="column" spacing="0">
         <Navbar />
         <PokeInfo />
+        <MovesList />
       </Stack>
     </QueryClientProvider>
   )
