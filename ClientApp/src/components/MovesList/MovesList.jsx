@@ -1,20 +1,16 @@
 import React from 'react';
-import {
-    Box, 
-    Typography, 
-    Link, 
-    Container, 
-    Stack, 
-    Grid 
-} from '@mui/material'
+import { Stack } from '@mui/material'
 import Move from './Move'
-
+import './MovesList.css'
 import pokeData from '../PokeInfo/volcarona.json'
 const moveData = pokeData.moves;
 
 export default function MovesList(moves) {
     return (
-        <Box>
+        <Stack sx={{
+            justifyContent: "center",
+            minWidth: "1000px"
+        }}>
             {moveData.map((move, index) => {
                 return (
                     <Move 
@@ -24,6 +20,6 @@ export default function MovesList(moves) {
                     />
                 )
             })}
-        </Box>
+        </Stack>
     )
 }

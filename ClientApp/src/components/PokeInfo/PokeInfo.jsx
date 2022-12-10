@@ -8,6 +8,7 @@ import {
 } from '@mui/material'
 
 import pokeData from './volcarona.json';
+import capitalize from '../../utils/capitalize';
 
 export default function PokeInfo() {
     return (
@@ -34,13 +35,13 @@ export default function PokeInfo() {
                         Type:
                     </Typography>
                     <Typography component="h3" variant="h6">
-                        {pokeData.types[0].type.name} | {pokeData.types[1].type.name}
+                        { capitalize(pokeData.types[0].type.name) } | { capitalize(pokeData.types[1].type.name) }
                     </Typography>
                     <Typography component="h2" variant="h5">
                         Abilities:
                     </Typography>
                     <Typography>
-                        {pokeData.abilities[0].ability.name} | {pokeData.abilities[1].ability.name}
+                        {capitalize(pokeData.abilities[0].ability.name)} | { capitalize(pokeData.abilities[1].ability.name)}
                     </Typography>
                 </Stack>
             </Grid>

@@ -1,0 +1,11 @@
+.tinyHeader {
+    text-align: center;
+    font-size: x-small;
+    font-weight: bold;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+.tinyText {
+    text-align: center;
+    font-size: small;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}

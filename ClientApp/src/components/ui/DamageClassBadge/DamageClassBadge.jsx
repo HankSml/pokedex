@@ -9,9 +9,7 @@ const classMap = {
 }
 
 export default function DamageClassBadge(damageClass) {
-    console.log(damageClass)
     return (
-        <div className={`damageClassBadge ${damageClass.damageClass}`}>
-        </div>
+        <div className={`damageClassBadge ${damageClass.damageClass}`}></div>
     )
 }
